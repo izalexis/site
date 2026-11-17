@@ -1,0 +1,40 @@
+{
+  "evenements": [
+    {
+      "date": "2026-03",
+      "type": "terrain",
+      "titre": "Maire adjoint aux finances de Chamarande",
+      "texte": "Élu au conseil municipal de Chamarande, je deviens maire adjoint chargé des finances."
+    },
+    {
+      "date": "2024-06-04",
+      "type": "assemblee",
+      "titre": "Question écrite sur le pacte Dutreil",
+      "texte": "J'interroge le Gouvernement sur le pacte Dutreil, qui facilite la transmission des entreprises familiales."
+    },
+    {
+      "date": "2024-02-22",
+      "type": "mission",
+      "titre": "Mission gouvernementale sur les lois EGalim",
+      "texte": "Le Premier ministre me confie une mission d'évaluation des lois EGalim et des négociations commerciales, pour améliorer le revenu des agriculteurs."
+    },
+    {
+      "date": "2024-02-15",
+      "type": "mission",
+      "titre": "Rapport « Simplification » remis au ministre de l'Économie",
+      "texte": "Avec quatre autres parlementaires, nous remettons 14 propositions pour simplifier la vie des entreprises, issues d'une consultation de près de 33 000 participants."
+    },
+    {
+      "date": "2023-11",
+      "type": "mission",
+      "titre": "Lancement de la mission sur la simplification",
+      "texte": "Début du chantier et de la grande consultation des chefs d'entreprise sur les normes et démarches administratives."
+    },
+    {
+      "date": "2022-06-19",
+      "type": "terrain",
+      "titre": "Élu député de la 3e circonscription de l'Essonne",
+      "texte": "Merci aux électrices et électeurs des 47 communes pour leur confiance."
+    }
+  ]
+}

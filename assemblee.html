@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L'Assemblée nationale en clair – Alexis Izard</title>
+  <meta name="description" content="Comment fonctionne l'Assemblée nationale ? Le rôle d'un député, le chemin d'une loi, un hémicycle interactif et un quiz pour tester vos connaissances.">
+  <meta name="author" content="Alexis Izard">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alexisizard.fr/assemblee.html">
+  <meta property="og:site_name" content="Alexis Izard">
+  <meta property="og:title" content="L'Assemblée nationale en clair – Alexis Izard">
+  <meta property="og:description" content="Comment fonctionne l'Assemblée nationale ? Le rôle d'un député, le chemin d'une loi, un hémicycle interactif et un quiz pour tester vos connaissances.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alexisizard.fr/assemblee.html">
+  <meta property="og:image" content="https://alexisizard.fr/photo.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#14183d">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,100,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+  
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="drapeau" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="entete">
+    <div class="entete-in">
+      <a class="logo" href="./">
+        <span class="logo-nom">Alexis<br>Izard</span>
+        <span class="logo-sous">Essonne<br>3<sup>e</sup> circo</span>
+      </a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span><span class="sr">Menu</span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Navigation principale">
+        <a href="./">Accueil</a>
+<a href="assemblee.html" aria-current="page">L'Assemblée</a>
+<a href="circonscription.html">La circo</a>
+<a href="engagement.html">Mon engagement</a>
+<a href="revue-de-presse.html">Revue de presse</a>
+<a href="bureau-de-vote.html">Mon bureau de vote</a>
+        <a class="btn btn-rouge btn-sm" href="./#contact">M'écrire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+<section class="page-tete fond-bleu">
+      <div class="conteneur page-tete-grille">
+        <div>
+          <p class="etiquette jaune-bg">Mode d'emploi</p>
+          <h1 class="titre-xl">L'Assemblée<br>en clair</h1>
+          <p class="chapeau">577 députés, des lois, des débats… Mais concrètement, à quoi sert un député&nbsp;? Ce que j'ai appris en deux ans de mandat, expliqué simplement.</p>
+        </div>
+        <div class="mini-chiffres">
+          <div><b>577</b><span>députés</span></div>
+          <div><b>5 ans</b><span>de mandat</span></div>
+          <div><b>8</b><span>commissions permanentes</span></div>
+          <div><b>10</b><span>députés pour l'Essonne</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HÉMICYCLE -->
+    <section class="section">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">L'hémicycle<br><span class="rouge">en chiffres</span></h2>
+          <p>Cliquez sur un chiffre&nbsp;: les sièges correspondants s'allument.</p>
+        </div>
+        <div class="hemi-grille">
+          <div class="carte hemi-carte">
+            <svg id="hemicycle" viewBox="0 0 1000 540" role="img" aria-label="Hémicycle de 577 sièges"></svg>
+            <p class="hemi-compteur"><b id="hemi-n">577</b> sièges</p>
+          </div>
+          <div>
+            <div class="segments hemi-choix" id="hemi-choix">
+              <button type="button" data-n="577" aria-pressed="true">577</button>
+              <button type="button" data-n="289" aria-pressed="false">289</button>
+              <button type="button" data-n="60" aria-pressed="false">60</button>
+              <button type="button" data-n="58" aria-pressed="false">58</button>
+              <button type="button" data-n="15" aria-pressed="false">15</button>
+              <button type="button" data-n="1" aria-pressed="false">1</button>
+            </div>
+            <div class="carte hemi-explication" id="hemi-texte" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RÔLES -->
+    <section class="section section-papier">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">Un député,<br><span class="bleu">quatre métiers</span></h2>
+          <p>La Constitution lui confie trois missions. Sur le terrain, il en exerce une quatrième, tout aussi essentielle.</p>
+        </div>
+        <div class="roles">
+          <div class="segments roles-onglets" role="tablist" aria-label="Les missions du député">
+            <button type="button" role="tab" aria-selected="true" aria-controls="role-0" id="tab-0">1. Voter la loi</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="role-1" id="tab-1">2. Contrôler</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="role-2" id="tab-2">3. Évaluer</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="role-3" id="tab-3">4. Représenter</button>
+          </div>
+          <div class="carte role-panneau" role="tabpanel" id="role-0" aria-labelledby="tab-0">
+            <div><h3>Voter la loi</h3>
+              <p>Le député examine les projets de loi du Gouvernement et peut déposer ses propres propositions de loi. Il les amende en commission puis en séance, et les vote.</p></div>
+            <aside class="vecu"><b>Ce que j'ai fait</b>J'ai siégé à la commission des affaires économiques et défendu la simplification des normes pour les entreprises.</aside>
+          </div>
+          <div class="carte role-panneau" role="tabpanel" id="role-1" aria-labelledby="tab-1" hidden>
+            <div><h3>Contrôler le Gouvernement</h3>
+              <p>Questions au Gouvernement chaque semaine, questions écrites aux ministres, commissions d'enquête, motion de censure&nbsp;: le député demande des comptes à l'exécutif.</p></div>
+            <aside class="vecu"><b>Ce que j'ai fait</b>J'ai interrogé les ministres par questions écrites, par exemple en 2024 sur le pacte Dutreil, qui facilite la transmission des entreprises familiales.</aside>
+          </div>
+          <div class="carte role-panneau" role="tabpanel" id="role-2" aria-labelledby="tab-2" hidden>
+            <div><h3>Évaluer les politiques publiques</h3>
+              <p>Une loi votée doit être appliquée et produire ses effets. Le député vérifie, mesure, auditionne, et propose des corrections.</p></div>
+            <aside class="vecu"><b>Ce que j'ai fait</b>Missionné par le Premier ministre en 2024 pour évaluer les lois EGalim sur le revenu des agriculteurs.</aside>
+          </div>
+          <div class="carte role-panneau" role="tabpanel" id="role-3" aria-labelledby="tab-3" hidden>
+            <div><h3>Représenter la circonscription</h3>
+              <p>Le député est élu par une circonscription mais représente la Nation entière. Il fait remonter les réalités du terrain, accompagne les élus locaux, les associations, les entreprises et les habitants.</p></div>
+            <aside class="vecu"><b>Ce que j'ai fait</b>800 déplacements dans les 47 communes, 5&nbsp;200 courriers, plus de 900 Essonniens accueillis à l'Assemblée.</aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHEMIN D'UNE LOI -->
+    <section class="section section-encre">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">Le chemin<br><span style="color:var(--jaune)">d'une loi</span></h2>
+          <p>De l'idée au Journal officiel, huit étapes. Avancez pas à pas.</p>
+        </div>
+        <div class="loi">
+          <ol class="loi-frise" id="loi-frise"></ol>
+          <div class="carte loi-carte">
+            <p class="loi-num" id="loi-num"></p>
+            <h3 id="loi-titre"></h3>
+            <p id="loi-texte"></p>
+            <div class="loi-nav">
+              <button class="btn" type="button" id="loi-prec">← Précédent</button>
+              <button class="btn btn-rouge" type="button" id="loi-suiv">Suivant →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEMAINE -->
+    <section class="section">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">Une semaine<br><span class="bleu">de député</span></h2>
+          <p>Paris en semaine, la circonscription le reste du temps. Une semaine type (l'agenda varie selon les textes examinés).</p>
+        </div>
+        <div class="segments" id="semaine-jours" role="tablist" aria-label="Jours de la semaine"></div>
+        <div class="carte semaine-carte" id="semaine-contenu" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="section section-papier">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">Quiz&nbsp;: connaissez-vous<br><span class="rouge">l'Assemblée&nbsp;?</span></h2>
+          <p>Dix questions, deux minutes. Partagez votre score&nbsp;!</p>
+        </div>
+        <div class="carte quiz" id="quiz-boite"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <div class="pied-cta">
+      <div class="conteneur pied-cta-in">
+        <p class="pied-cta-titre">Une question&nbsp;? Une idée&nbsp;?<br>Écrivez-moi, je réponds.</p>
+        <a class="btn btn-blanc btn-lg js-mail" data-u="alexis.izard" data-d="gmail.com" href="./#contact">Écrire un email</a>
+      </div>
+    </div>
+    <div class="conteneur pied-grille">
+      <div>
+        <p class="pied-logo">Alexis Izard</p>
+        <p>Député de la 3<sup>e</sup> circonscription de l'Essonne de 2022 à 2024.<br>Maire adjoint aux finances de Chamarande.</p>
+      </div>
+      <div>
+        <p class="pied-titre">Le site</p>
+        <ul>
+          <li><a href="./">Accueil</a></li>
+          <li><a href="assemblee.html">L'Assemblée en clair</a></li>
+          <li><a href="circonscription.html">La circonscription</a></li>
+          <li><a href="engagement.html">Mon engagement</a></li>
+          <li><a href="revue-de-presse.html">Revue de presse</a></li>
+          <li><a href="bureau-de-vote.html">Trouver mon bureau de vote</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied-titre">La circo en bref</p>
+        <ul>
+          <li>47 communes</li>
+          <li>≈ 152 000 habitants</li>
+          <li>110 bureaux de vote</li>
+          <li>De Brétigny-sur-Orge à Dourdan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="conteneur pied-bas">
+      <p>© <span class="js-annee">2026</span> Alexis Izard</p>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script src="js/commun.js" defer></script>
+  <script src="js/assemblee.js" defer></script>
+</body>
+</html>
