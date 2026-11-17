@@ -4,7 +4,7 @@
   var svg = document.getElementById('carte-circo');
   var fiche = document.getElementById('fiche');
   var legende = document.getElementById('legende');
-  var PALETTE = ['#2337c6', '#e4252f', '#ffd23f', '#5ed38a', '#8b5cf6', '#ff8a3d', '#14183d'];
+  var PALETTE = ['#1b2c7a', '#6f86d6', '#c8102e', '#a9b4d8', '#e58a98', '#3d5bbf', '#111c52'];
   var data, chemins = {}, actif = null, mode = 'epci', couleursEpci = {};
 
   function court(epci) {
@@ -14,7 +14,7 @@
   function couleur(c) {
     if (mode === 'epci') return couleursEpci[c.epci];
     var p = c.pop, t = p > 20000 ? 1 : p > 8000 ? .8 : p > 4000 ? .6 : p > 1500 ? .4 : p > 700 ? .25 : .12;
-    return 'rgba(35,55,198,' + t + ')';
+    return 'rgba(27,44,122,' + t + ')';
   }
 
   function peindre() {
@@ -25,7 +25,7 @@
       }).join('');
     } else {
       legende.innerHTML = [['< 700', .12], ['700 – 1 500', .25], ['1 500 – 4 000', .4], ['4 000 – 8 000', .6], ['8 000 – 20 000', .8], ['> 20 000', 1]].map(function (l) {
-        return '<span><i style="background:rgba(35,55,198,' + l[1] + ')"></i>' + l[0] + ' hab.</span>';
+        return '<span><i style="background:rgba(27,44,122,' + l[1] + ')"></i>' + l[0] + ' hab.</span>';
       }).join('');
     }
   }
@@ -38,7 +38,7 @@
     p.parentNode.appendChild(p); // passe au premier plan
     var rang = data.parPop.indexOf(c) + 1;
     fiche.innerHTML =
-      '<p class="etiquette rouge-bg">' + (rang === 1 ? '1re commune' : rang + 'e commune') + ' par population</p>' +
+      '<p class="etiquette">' + (rang === 1 ? '1re commune' : rang + 'e commune') + ' par population</p>' +
       '<h3>' + AI.esc(c.nom) + '</h3>' +
       '<dl>' +
       '<div><dt>Habitants</dt><dd>' + AI.fmt(c.pop) + '</dd></div>' +

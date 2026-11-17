@@ -7,15 +7,17 @@
   var MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
   var evts = [], filtre = 'tout';
 
-  function quand(d) {
+  function quand(d, libelle) {
+    if (libelle) return libelle;
     var p = d.split('-');
+    if (!p[1]) return p[0];
     return (p[2] ? (+p[2] === 1 ? '1er' : +p[2]) + ' ' : '') + MOIS[+p[1] - 1] + ' ' + p[0];
   }
   function rendre() {
     var liste = evts.filter(function (e) { return filtre === 'tout' || e.type === filtre; });
     frise.innerHTML = liste.map(function (e) {
       return '<li class="frise-el t-' + e.type + '">' +
-        '<p class="frise-date">' + quand(e.date) + '</p>' +
+        '<p class="frise-date">' + quand(e.date, e.quand) + '</p>' +
         '<div class="carte frise-carte">' +
         (e.image ? '<img src="' + AI.esc(e.image) + '" alt="" loading="lazy">' : '') +
         '<span class="frise-type">' + AI.esc(TYPES[e.type] || e.type) + (e.commune ? ' · ' + AI.esc(e.commune) : '') + '</span>' +

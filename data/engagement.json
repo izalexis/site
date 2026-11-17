@@ -1,10 +1,18 @@
 {
   "evenements": [
     {
-      "date": "2026-03",
+      "date": "2026",
+      "quand": "Aujourd'hui",
       "type": "terrain",
-      "titre": "Maire adjoint aux finances de Chamarande",
-      "texte": "Élu au conseil municipal de Chamarande, je deviens maire adjoint chargé des finances."
+      "titre": "Directeur de cabinet de Gabriel Attal et maire adjoint aux finances de Chamarande",
+      "texte": "À l'Assemblée nationale auprès du président du groupe Ensemble pour la République, et sur le terrain en charge du budget de Chamarande."
+    },
+    {
+      "date": "2024-07",
+      "quand": "2024 – 2025",
+      "type": "mission",
+      "titre": "Délégué ministériel chargé de la protection des consommateurs",
+      "texte": "Défendre les intérêts des consommateurs au sein de l'action gouvernementale."
     },
     {
       "date": "2024-06-04",
@@ -32,6 +40,7 @@
     },
     {
       "date": "2022-06-19",
+      "quand": "2022 – 2024",
       "type": "terrain",
       "titre": "Élu député de la 3e circonscription de l'Essonne",
       "texte": "Merci aux électrices et électeurs des 47 communes pour leur confiance."
