@@ -182,7 +182,9 @@
    "communes": [
     "Arpajon",
     "Saint-Germain-lès-Arpajon"
-   ]
+   ],
+   "image": "stories/68970f6363.jpg",
+   "legende": "Story du jour"
   },
   {
    "date": "2023-07-21",
@@ -227,7 +229,9 @@
    "texte": "J'ai fait découvrir la circonscription à Guillaume Kasbarian, président de la commission des affaires économiques, dont le BTP CFA de Brétigny.",
    "communes": [
     "Brétigny-sur-Orge"
-   ]
+   ],
+   "image": "stories/394091a020.jpg",
+   "legende": "Story du jour"
   },
   {
    "date": "2023-10-09",
@@ -280,7 +284,9 @@
    "type": "media",
    "titre": "La matinale de CNEWS",
    "texte": "Invité de la matinale pour défendre les positions du groupe.",
-   "communes": []
+   "communes": [],
+   "image": "stories/0969fd91d8.jpg",
+   "media": "CNEWS"
   },
   {
    "date": "2024-01-12",
