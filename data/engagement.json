@@ -1,49 +1,439 @@
 {
-  "evenements": [
-    {
-      "date": "2026",
-      "quand": "Aujourd'hui",
-      "type": "terrain",
-      "titre": "Directeur de cabinet de Gabriel Attal et maire adjoint aux finances de Chamarande",
-      "texte": "À l'Assemblée nationale auprès du président du groupe Ensemble pour la République, et sur le terrain en charge du budget de Chamarande."
-    },
-    {
-      "date": "2024-07",
-      "quand": "2024 – 2025",
-      "type": "mission",
-      "titre": "Délégué ministériel chargé de la protection des consommateurs",
-      "texte": "Défendre les intérêts des consommateurs au sein de l'action gouvernementale."
-    },
-    {
-      "date": "2024-06-04",
-      "type": "assemblee",
-      "titre": "Question écrite sur le pacte Dutreil",
-      "texte": "J'interroge le Gouvernement sur le pacte Dutreil, qui facilite la transmission des entreprises familiales."
-    },
-    {
-      "date": "2024-02-22",
-      "type": "mission",
-      "titre": "Mission gouvernementale sur les lois EGalim",
-      "texte": "Le Premier ministre me confie une mission d'évaluation des lois EGalim et des négociations commerciales, pour améliorer le revenu des agriculteurs."
-    },
-    {
-      "date": "2024-02-15",
-      "type": "mission",
-      "titre": "Rapport « Simplification » remis au ministre de l'Économie",
-      "texte": "Avec quatre autres parlementaires, nous remettons 14 propositions pour simplifier la vie des entreprises, issues d'une consultation de près de 33 000 participants."
-    },
-    {
-      "date": "2023-11",
-      "type": "mission",
-      "titre": "Lancement de la mission sur la simplification",
-      "texte": "Début du chantier et de la grande consultation des chefs d'entreprise sur les normes et démarches administratives."
-    },
-    {
-      "date": "2022-06-19",
-      "quand": "2022 – 2024",
-      "type": "terrain",
-      "titre": "Élu député de la 3e circonscription de l'Essonne",
-      "texte": "Merci aux électrices et électeurs des 47 communes pour leur confiance."
-    }
-  ]
+ "apres": [
+  {
+   "date": "2026",
+   "quand": "Aujourd'hui",
+   "type": "apres",
+   "titre": "Directeur de cabinet de Gabriel Attal et maire adjoint aux finances de Chamarande",
+   "texte": "À l'Assemblée nationale auprès du président du groupe Ensemble pour la République, et sur le terrain en charge du budget de Chamarande."
+  },
+  {
+   "date": "2024-07",
+   "quand": "2024 – 2025",
+   "type": "apres",
+   "titre": "Délégué ministériel chargé de la protection des consommateurs",
+   "texte": "Défendre les intérêts des consommateurs au sein de l'action gouvernementale."
+  }
+ ],
+ "evenements": [
+  {
+   "date": "2022-06-19",
+   "type": "terrain",
+   "titre": "Élu député de la 3ᵉ circonscription",
+   "texte": "Merci aux électrices et électeurs des 47 communes pour leur confiance. Premier chantier : constituer une équipe et trouver une permanence.",
+   "communes": []
+  },
+  {
+   "date": "2022-07",
+   "type": "assemblee",
+   "titre": "Premier texte : la loi pouvoir d'achat",
+   "texte": "À l'ouverture de la législature, j'ai voté la loi pouvoir d'achat : +4 % pour les pensions, les allocations familiales et les minima sociaux.",
+   "communes": []
+  },
+  {
+   "date": "2022-07-03",
+   "type": "media",
+   "titre": "Premiers plateaux sur BFMTV",
+   "texte": "Dès les premières semaines du mandat, en coulisses puis en direct sur BFMTV.",
+   "communes": [],
+   "image": "stories/bf2a372500.jpg",
+   "media": "BFMTV"
+  },
+  {
+   "date": "2022-09",
+   "type": "terrain",
+   "titre": "Première rentrée avec les associations",
+   "texte": "Rentrées scolaires et fêtes des associations à Dourdan, Arpajon, Brétigny, Égly, Marolles, Étréchy…",
+   "communes": [
+    "Dourdan",
+    "Arpajon",
+    "Brétigny-sur-Orge",
+    "Égly",
+    "Marolles-en-Hurepoix",
+    "Étréchy"
+   ]
+  },
+  {
+   "date": "2022-10",
+   "type": "assemblee",
+   "titre": "Rapporteur pour avis sur France 2030",
+   "texte": "J'ai présenté mon rapport pour avis sur les investissements d'avenir de l'État : industrie, énergie, souveraineté alimentaire.",
+   "communes": []
+  },
+  {
+   "date": "2022-10-13",
+   "type": "media",
+   "titre": "Sur CNEWS pour la crise des carburants",
+   "texte": "En plateau pour expliquer les mesures face à la pénurie de carburant.",
+   "communes": [],
+   "image": "stories/86ebad79c1.jpg",
+   "media": "CNEWS"
+  },
+  {
+   "date": "2022-10-23",
+   "type": "assemblee",
+   "titre": "Au conseil d'administration de l'INA",
+   "texte": "Désigné pour représenter l'Assemblée nationale au conseil d'administration de l'Institut national de l'audiovisuel.",
+   "communes": []
+  },
+  {
+   "date": "2022-12",
+   "type": "assemblee",
+   "titre": "Énergies renouvelables et transmission d'entreprises",
+   "texte": "Début de l'examen du texte sur les énergies renouvelables et de mes travaux sur la transmission de nos entreprises.",
+   "communes": []
+  },
+  {
+   "date": "2023-01",
+   "type": "terrain",
+   "titre": "Tournée des commerçants primés",
+   "texte": "À la rencontre des commerçants du territoire récompensés aux Papilles d'or de la CCI Essonne.",
+   "communes": []
+  },
+  {
+   "date": "2023-01-29",
+   "type": "media",
+   "titre": "En direct sur RTL avec Clément Beaune",
+   "texte": "Un débat en direct aux côtés du ministre des Transports.",
+   "communes": [],
+   "image": "stories/4312ec5acc.jpg",
+   "media": "RTL"
+  },
+  {
+   "date": "2023-02",
+   "type": "terrain",
+   "titre": "Le ministre des Transports face aux usagers du RER C",
+   "texte": "J'ai organisé à Saint-Chéron une rencontre entre Clément Beaune, des élus et des usagers du RER C pour répondre aux problèmes de la ligne.",
+   "communes": [
+    "Saint-Chéron"
+   ]
+  },
+  {
+   "date": "2023-03",
+   "type": "terrain",
+   "titre": "Aux côtés des habitants des maisons fissurées",
+   "texte": "Rencontre avec le collectif des Ardoisiers à Brétigny-sur-Orge. J'ai plaidé pour un texte qui protège mieux les sinistrés.",
+   "communes": [
+    "Brétigny-sur-Orge"
+   ]
+  },
+  {
+   "date": "2023-03-21",
+   "type": "assemblee",
+   "titre": "Le RER C devant le PDG de la SNCF, le nucléaire voté",
+   "texte": "Le même jour : rendez-vous avec le PDG de la SNCF sur le RER C, et vote solennel du projet de loi nucléaire, travaillé en commission.",
+   "communes": []
+  },
+  {
+   "date": "2023-04",
+   "type": "terrain",
+   "titre": "Ouverture de ma permanence à Saint-Chéron",
+   "texte": "Une permanence au 27 ter, rue Charles-de-Gaulle, pour recevoir les habitants.",
+   "communes": [
+    "Saint-Chéron"
+   ]
+  },
+  {
+   "date": "2023-04-03",
+   "type": "terrain",
+   "titre": "Olivier Dussopt à l'Epide de Brétigny",
+   "texte": "J'ai accompagné le ministre du Travail à l'Epide de Brétigny-sur-Orge, puis au Pôle emploi de Dourdan.",
+   "communes": [
+    "Brétigny-sur-Orge",
+    "Dourdan"
+   ],
+   "image": "stories/97696dac03.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2023-05",
+   "type": "terrain",
+   "titre": "Commissariats, hôpital, service militaire volontaire",
+   "texte": "Visites des commissariats de Brétigny et d'Arpajon, du Centre hospitalier Sud-Essonne à Dourdan et du Service militaire volontaire de Brétigny.",
+   "communes": [
+    "Brétigny-sur-Orge",
+    "Arpajon",
+    "Dourdan"
+   ]
+  },
+  {
+   "date": "2023-06",
+   "type": "assemblee",
+   "titre": "Responsable du texte Industrie verte",
+   "texte": "Nommé responsable du projet de loi Industrie verte pour le groupe Renaissance, après avoir présenté les conclusions du groupe de suivi.",
+   "communes": []
+  },
+  {
+   "date": "2023-06-06",
+   "type": "terrain",
+   "titre": "Au péage de Dourdan pour l'A10 gratuite",
+   "texte": "Aux côtés de l'association A10 Gratuite, pour les automobilistes du Sud-Essonne.",
+   "communes": [
+    "Dourdan"
+   ],
+   "image": "stories/00ccfb9567.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2023-07-04",
+   "type": "terrain",
+   "titre": "Deux ministres auprès des commerçants après les émeutes",
+   "texte": "J'ai fait venir Bruno Le Maire et Olivia Grégoire à Arpajon et Saint-Germain-lès-Arpajon pour soutenir les commerçants touchés.",
+   "communes": [
+    "Arpajon",
+    "Saint-Germain-lès-Arpajon"
+   ]
+  },
+  {
+   "date": "2023-07-21",
+   "type": "assemblee",
+   "titre": "La loi Industrie verte adoptée",
+   "texte": "Après mon discours à la tribune, adoption à large majorité au terme de 31 heures de débats.",
+   "communes": []
+  },
+  {
+   "date": "2023-07-27",
+   "type": "terrain",
+   "titre": "Jean-Noël Barrot à la police municipale de Brétigny",
+   "texte": "Visite officielle du ministre au poste de police municipale.",
+   "communes": [
+    "Brétigny-sur-Orge"
+   ],
+   "image": "stories/12a033db2a.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2023-09",
+   "type": "assemblee",
+   "titre": "Porte-parole du groupe Renaissance",
+   "texte": "Nommé porte-parole du groupe à l'Assemblée, pour défendre nos textes sur les plateaux, notamment sur le logement et le pouvoir d'achat.",
+   "communes": []
+  },
+  {
+   "date": "2023-09",
+   "type": "terrain",
+   "titre": "18 forums des associations",
+   "texte": "Une rentrée au contact des bénévoles : Arpajon, Étréchy, Corbreuse et quinze autres communes.",
+   "communes": [
+    "Arpajon",
+    "Étréchy",
+    "Corbreuse"
+   ]
+  },
+  {
+   "date": "2023-09-22",
+   "type": "terrain",
+   "titre": "Le président de la commission en visite",
+   "texte": "J'ai fait découvrir la circonscription à Guillaume Kasbarian, président de la commission des affaires économiques, dont le BTP CFA de Brétigny.",
+   "communes": [
+    "Brétigny-sur-Orge"
+   ]
+  },
+  {
+   "date": "2023-10-09",
+   "type": "assemblee",
+   "titre": "Ma loi sur les négociations commerciales adoptée",
+   "texte": "Rapporteur du texte qui avance les négociations entre industriels et grande distribution : adopté en commission le 3 octobre, en séance le 9.",
+   "communes": []
+  },
+  {
+   "date": "2023-10",
+   "type": "terrain",
+   "titre": "Inauguration du cœur de ville d'Arpajon",
+   "texte": "Puis retour auprès des commerçants touchés par les émeutes, et visite de l'entreprise MDS à Dourdan.",
+   "communes": [
+    "Arpajon",
+    "Dourdan"
+   ]
+  },
+  {
+   "date": "2023-11",
+   "type": "mission",
+   "titre": "Lancement des Rencontres de la simplification",
+   "texte": "Avec quatre autres parlementaires, j'anime la consultation des chefs d'entreprise lancée par Bercy.",
+   "communes": []
+  },
+  {
+   "date": "2023-12",
+   "type": "mission",
+   "titre": "La simplification en réunions publiques",
+   "texte": "À Étréchy le 8 décembre, à Arpajon le 14, à Dourdan le 22 : les entrepreneurs de la circo ont eu leur mot à dire.",
+   "communes": [
+    "Étréchy",
+    "Arpajon",
+    "Dourdan"
+   ]
+  },
+  {
+   "date": "2023-12-04",
+   "type": "terrain",
+   "titre": "Olivier Dussopt chez Bimbo au Plessis-Pâté",
+   "texte": "Signature d'une charte pour l'emploi et les compétences dans les métiers en tension.",
+   "communes": [
+    "Le Plessis-Pâté"
+   ],
+   "image": "stories/1a5235c085.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2024-01-06",
+   "type": "media",
+   "titre": "La matinale de CNEWS",
+   "texte": "Invité de la matinale pour défendre les positions du groupe.",
+   "communes": []
+  },
+  {
+   "date": "2024-01-12",
+   "type": "terrain",
+   "titre": "La porte-parole du Gouvernement à Dourdan",
+   "texte": "J'ai accueilli Prisca Thevenot pour une visite officielle.",
+   "communes": [
+    "Dourdan"
+   ],
+   "image": "stories/9df2f3a238.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2024-01-15",
+   "type": "mission",
+   "titre": "Un Tour de France de la simplification",
+   "texte": "Morbihan, Eure-et-Loir, Val-de-Marne, Marne, Charente, Gironde, Bouches-du-Rhône : la consultation va à la rencontre des chefs d'entreprise.",
+   "communes": []
+  },
+  {
+   "date": "2024-01-26",
+   "type": "media",
+   "titre": "Au JT de France 3 sur la crise agricole",
+   "texte": "En direct au journal de 12h30 pour parler de la situation de nos agriculteurs.",
+   "communes": [],
+   "image": "stories/7357ddc850.jpg",
+   "media": "France 3"
+  },
+  {
+   "date": "2024-01-29",
+   "type": "terrain",
+   "titre": "Avec les agriculteurs mobilisés",
+   "texte": "Aux péages de l'A6 et de Saint-Arnoult, à l'écoute des agriculteurs en colère.",
+   "communes": []
+  },
+  {
+   "date": "2024-02-09",
+   "type": "terrain",
+   "titre": "Au parlement des enfants d'Étréchy",
+   "texte": "Les collégiens travaillaient sur leur proposition de loi pour l'égalité filles-garçons dans le sport.",
+   "communes": [
+    "Étréchy"
+   ],
+   "image": "stories/ce036566ea.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2024-02-15",
+   "type": "mission",
+   "titre": "14 propositions pour « rendre des heures aux Français »",
+   "texte": "Rapport remis à Bercy : il a servi de base au projet de loi de simplification présenté en avril.",
+   "communes": []
+  },
+  {
+   "date": "2024-02-22",
+   "type": "mission",
+   "titre": "Mission gouvernementale EGalim",
+   "texte": "Le Premier ministre me confie, avec Anne-Laure Babault, l'évaluation des lois EGalim pour mieux rémunérer les agriculteurs.",
+   "communes": []
+  },
+  {
+   "date": "2024-02-27",
+   "type": "media",
+   "titre": "Duplex sur LCP avant ma question au Gouvernement",
+   "texte": "Sur les prix planchers annoncés par le président de la République pour les agriculteurs.",
+   "communes": [],
+   "image": "stories/c9d1a8bf04.jpg",
+   "media": "LCP"
+  },
+  {
+   "date": "2024-03-02",
+   "type": "mission",
+   "titre": "Lancement de la mission au Salon de l'agriculture",
+   "texte": "Avec Marc Fesneau, Olivia Grégoire et Agnès Pannier-Runacher. Premières auditions dès le 11 mars.",
+   "communes": []
+  },
+  {
+   "date": "2024-03",
+   "type": "terrain",
+   "titre": "Action Cœur de Ville signé à Arpajon",
+   "texte": "Un financement pour les travaux d'entrée de ville.",
+   "communes": [
+    "Arpajon"
+   ]
+  },
+  {
+   "date": "2024-03-25",
+   "type": "terrain",
+   "titre": "Première pierre du laboratoire batteries de Renault",
+   "texte": "Au centre technique Renault de Lardy, un investissement d'avenir dans la circo.",
+   "communes": [
+    "Lardy"
+   ],
+   "image": "stories/a1ad60acc3.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2024-04-03",
+   "type": "terrain",
+   "titre": "Avec les agriculteurs essonniens",
+   "texte": "Rencontres agricoles de l'Essonne à Étréchy, puis exploitations à Roinville, Corbreuse et Janville-sur-Juine.",
+   "communes": [
+    "Étréchy",
+    "Roinville",
+    "Corbreuse",
+    "Janville-sur-Juine"
+   ],
+   "image": "stories/40b45e2db9.jpg",
+   "legende": "Story du jour"
+  },
+  {
+   "date": "2024-04-15",
+   "type": "mission",
+   "titre": "Une consultation ouverte à tous sur EGalim",
+   "texte": "Deux questionnaires sur la plateforme Agora : 5 000 consommateurs et professionnels ont répondu.",
+   "communes": []
+  },
+  {
+   "date": "2024-04-24",
+   "type": "mission",
+   "titre": "Le projet de loi de simplification présenté",
+   "texte": "À la conférence de presse de présentation du texte, bâti sur notre rapport.",
+   "communes": []
+  },
+  {
+   "date": "2024-05",
+   "type": "mission",
+   "titre": "Rapport EGalim remis au Gouvernement",
+   "texte": "Nourri par les auditions et la consultation, il trace les évolutions pour mieux rémunérer les producteurs.",
+   "communes": []
+  },
+  {
+   "date": "2024-05-22",
+   "type": "assemblee",
+   "titre": "Commission d'enquête sur les violences dans le cinéma",
+   "texte": "Membre de la commission d'enquête sur les violences dans le cinéma, l'audiovisuel, le spectacle vivant, la mode et la publicité.",
+   "communes": []
+  },
+  {
+   "date": "2024-06",
+   "type": "terrain",
+   "titre": "Pour le RER C, contre le terminus à Austerlitz",
+   "texte": "Avec les élus du Sud-Essonne, contre le scénario qui aurait coupé les branches Dourdan et Étampes de Paris.",
+   "communes": [
+    "Dourdan"
+   ]
+  },
+  {
+   "date": "2024-06-04",
+   "type": "assemblee",
+   "titre": "Question écrite sur le pacte Dutreil",
+   "texte": "Pour faciliter la transmission des entreprises familiales.",
+   "communes": []
+  }
+ ]
 }

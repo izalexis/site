@@ -21,6 +21,17 @@
     setTimeout(function () { el.textContent = AI.fmt(cible); }, duree + 900);
   });
 
+  // Bandeau des passages médias
+  var bande = document.getElementById('medias-bande');
+  if (bande) AI.json('data/medias.json').then(function (l) {
+    var M = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+    bande.innerHTML = l.slice(0, 14).map(function (m) {
+      var p = m.d.split('-');
+      return '<li><a href="medias.html" style="text-decoration:none"><div class="media-img"><img loading="lazy" src="stories/' + m.id + '.jpg" width="240" height="426" alt="Passage sur ' + AI.esc(m.media) + '"></div>' +
+        '<p class="media-nom">' + AI.esc(m.media) + '</p><p class="media-date">' + (+p[2]) + ' ' + M[p[1] - 1] + ' ' + p[0] + '</p></a></li>';
+    }).join('');
+  }).catch(function () {});
+
   var piste = document.getElementById('defile');
   var cartesvg = document.getElementById('heros-carte');
 

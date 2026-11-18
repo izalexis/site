@@ -13,6 +13,24 @@
     });
   }
 
+  // Sous-menu « Infos utiles »
+  document.querySelectorAll('.menu-groupe').forEach(function (g) {
+    var b = g.querySelector('.menu-bouton');
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var o = b.getAttribute('aria-expanded') !== 'true';
+      b.setAttribute('aria-expanded', String(o));
+      g.classList.toggle('ouvert', o);
+    });
+  });
+  function fermerGroupes() {
+    document.querySelectorAll('.menu-groupe.ouvert').forEach(function (g) {
+      g.classList.remove('ouvert'); g.querySelector('.menu-bouton').setAttribute('aria-expanded', 'false');
+    });
+  }
+  document.addEventListener('click', function (e) { if (!e.target.closest('.menu-groupe')) fermerGroupes(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fermerGroupes(); });
+
   // Liens email (adresse assemblée en JS pour limiter le spam)
   document.querySelectorAll('.js-mail').forEach(function (a) {
     var adr = a.dataset.u + '@' + a.dataset.d;
