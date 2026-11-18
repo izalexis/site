@@ -154,40 +154,54 @@
       actif = null;
     });
 
-    /* ---------- Calendrier ---------- */
-    var an = {};
-    pres.jours_an.forEach(function (d) { an[d] = 1; });
-    var debut = new Date(pres.debut), fin = new Date(pres.fin), html = '';
-    var m = new Date(debut.getFullYear(), debut.getMonth(), 1);
-    function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
-    while (m <= fin) {
-      var y = m.getFullYear(), mo = m.getMonth(), nbj = new Date(y, mo + 1, 0).getDate(), decal = (m.getDay() + 6) % 7, terrain = 0;
-      var cases = '';
-      for (var k = 0; k < decal; k++) cases += '<span class="c-vide"></span>';
-      for (var dj = 1; dj <= nbj; dj++) {
-        var d = new Date(y, mo, dj), id = iso(d), hors = d < debut || d > fin;
-        if (hors) cases += '<span class="c-hors"></span>';
-        else if (parJour[id]) { terrain++; cases += '<button type="button" class="c-circo" data-d="' + id + '" title="' + dateLongue(id) + ' : ' + AI.esc(nom[parJour[id][0].c]) + '"><span class="sr">' + dateLongue(id) + '</span></button>'; }
-        else if (an[id]) cases += '<span class="c-an" title="' + dateLongue(id) + ' : Assemblée nationale"></span>';
-        else cases += '<span class="c-rien"></span>';
-      }
-      html += '<div class="mois"><p class="mois-nom">' + MOIS[mo] + ' ' + y + '<small>' + (terrain ? terrain + ' j' : '') + '</small></p><div class="mois-grille">' + cases + '</div></div>';
-      m = new Date(y, mo + 1, 1);
-    }
+    /* ---------- Calendrier : toutes les stories du mandat (data/agenda.json) ---------- */
     var cal = $('calendrier');
-    cal.innerHTML = html;
-    cal.addEventListener('click', function (e) {
-      var b = e.target.closest('button[data-d]');
-      if (!b) return;
-      cal.querySelectorAll('.choisi').forEach(function (x) { x.classList.remove('choisi'); });
-      b.classList.add('choisi');
-      var liste = parJour[b.dataset.d];
-      var communes = liste.map(function (s) { return nom[s.c]; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
-      $('jour-titre').textContent = dateLongue(b.dataset.d, true) + ' · ' + communes.join(', ');
-      $('jour-piste').innerHTML = cartes(liste, true);
-      $('jour').hidden = false;
-      $('jour').scrollIntoView({ behavior: reduit ? 'auto' : 'smooth', block: 'nearest' });
-    });
+    function lieuDe(l) { return nom[l] || (l === 'AN' ? 'Assemblée nationale' : l.indexOf('M:') === 0 ? l.slice(2) : l === 'A' ? 'Ailleurs' : ''); }
+    function typeDe(l) { return nom[l] ? 'circo' : l === 'AN' ? 'an' : l.indexOf('M:') === 0 ? 'media' : 'ailleurs'; }
+    var RANG = { circo: 0, an: 1, media: 2, ailleurs: 3 };
+    function calendrier(agenda) {
+      var debut = new Date(pres.debut), fin = new Date(pres.fin), html = '';
+      var m = new Date(debut.getFullYear(), debut.getMonth(), 1);
+      function iso(d) { return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+      while (m <= fin) {
+        var y = m.getFullYear(), mo = m.getMonth(), nbj = new Date(y, mo + 1, 0).getDate(), decal = (m.getDay() + 6) % 7, nb = 0;
+        var cases = '';
+        for (var k = 0; k < decal; k++) cases += '<span class="c-vide"></span>';
+        for (var dj = 1; dj <= nbj; dj++) {
+          var d = new Date(y, mo, dj), id = iso(d), liste = agenda[id];
+          if (d < debut || d > fin) { cases += '<span class="c-hors"></span>'; continue; }
+          if (!liste) { cases += '<span class="c-rien"></span>'; continue; }
+          nb++;
+          var lieux = [], type = 'ailleurs';
+          liste.forEach(function (s) {
+            var t = typeDe(s[2]), n = lieuDe(s[2]);
+            if (RANG[t] < RANG[type]) type = t;
+            if (n && lieux.indexOf(n) < 0) lieux.push(n);
+          });
+          cases += '<button type="button" class="c-' + type + '" data-d="' + id + '" title="' + dateLongue(id) + (lieux.length ? ' : ' + AI.esc(lieux.join(', ')) : '') + '"><span class="sr">' + dateLongue(id) + '</span></button>';
+        }
+        html += '<div class="mois"><p class="mois-nom">' + MOIS[mo] + ' ' + y + '<small>' + (nb ? nb + ' j' : '') + '</small></p><div class="mois-grille">' + cases + '</div></div>';
+        m = new Date(y, mo + 1, 1);
+      }
+      cal.innerHTML = html;
+      cal.addEventListener('click', function (e) {
+        var b = e.target.closest('button[data-d]');
+        if (!b) return;
+        cal.querySelectorAll('.choisi').forEach(function (x) { x.classList.remove('choisi'); });
+        b.classList.add('choisi');
+        var liste = agenda[b.dataset.d], lieux = [];
+        liste.forEach(function (s) { var n = lieuDe(s[2]); if (n && lieux.indexOf(n) < 0) lieux.push(n); });
+        $('jour-titre').textContent = dateLongue(b.dataset.d, true) + (lieux.length ? ' · ' + lieux.join(', ') : '');
+        $('jour-piste').innerHTML = liste.map(function (s) {
+          var n = lieuDe(s[2]);
+          return '<li class="vignette"><img loading="lazy" src="stories/' + s[0] + '.jpg" width="240" height="426" alt="Story du ' + dateLongue(b.dataset.d) + (n ? ', ' + AI.esc(n) : '') + '">' +
+            '<p><b>' + (n ? AI.esc(n) + ' · ' : '') + s[1] + '</b>' + (s[4] ? '<span>' + AI.esc(s[4]) + '</span>' : '') + '</p></li>';
+        }).join('');
+        $('jour').hidden = false;
+        $('jour').scrollIntoView({ behavior: reduit ? 'auto' : 'smooth', block: 'nearest' });
+      });
+    }
+    AI.json('data/agenda.json').then(calendrier).catch(function () { cal.innerHTML = '<p>Le calendrier n\'a pas pu être chargé.</p>'; });
 
     /* ---------- Jeu « Où étais-je ? » ---------- */
     var visitees = Object.keys(pres.communes);
