@@ -43,8 +43,9 @@
 <a href="assemblee.html">L'Assemblée</a>
 <a href="circonscription.html">La circo</a>
 <a href="engagement.html">Mon engagement</a>
+<a href="sur-le-terrain.html">Sur le terrain</a>
 <a href="revue-de-presse.html">Revue de presse</a>
-<a href="bureau-de-vote.html">Mon bureau de vote</a>
+<a href="bureau-de-vote.html">Bureau de vote</a>
         <a class="btn btn-rouge btn-sm" href="./#contact">M'écrire</a>
       </nav>
     </div>
@@ -53,31 +54,42 @@
   <main id="contenu">
 <!-- HÉROS -->
     <section class="heros">
+      <svg class="heros-carte" id="heros-carte" aria-hidden="true" focusable="false"></svg>
       <div class="conteneur heros-grille">
-        <div>
+        <div class="heros-texte">
           <p class="etiquette">Essonne · 3ᵉ circonscription</p>
-          <h1 class="titre-xl">Alexis <span class="ligne2">Izard</span></h1>
+          <h1 class="titre-xl"><span class="mot">Alexis</span> <span class="mot">Izard</span></h1>
           <p class="chapeau">
-            Votre député de 2022 à 2024 et maire adjoint aux finances de Chamarande.
+            Votre député de 2022 à 2024, aujourd'hui maire adjoint aux finances de Chamarande.
             <span class="surligne">Toujours disponible pour répondre à vos besoins.</span>
           </p>
-          <div class="badges">
-            <span class="badge"><b>Mandat</b> Député 2022 – 2024</span>
-            <span class="badge"><b>Élu local</b> Maire adjoint de Chamarande</span>
-            <span class="badge"><b>Aujourd'hui</b> Directeur de cabinet, groupe EPR</span>
+          <div class="heros-compteurs">
+            <div><b><span class="js-compte" data-n="47">47</span><small>/47</small></b><span>communes parcourues</span></div>
+            <div><b class="js-compte" data-n="800">800</b><span>déplacements en deux ans</span></div>
+            <div><b class="js-compte" data-n="5200">5 200</b><span>courriers aux habitants</span></div>
           </div>
           <div class="actions">
-            <a class="btn btn-rouge btn-lg" href="#contact">M'écrire</a>
-            <a class="btn btn-lg" href="#parcours">Mon parcours</a>
+            <a class="btn btn-blanc btn-lg" href="#contact">M'écrire</a>
+            <a class="btn btn-contour btn-lg" href="sur-le-terrain.html">Voir où j'étais →</a>
           </div>
         </div>
-        <figure class="portrait" style="margin:0">
-          <div class="portrait-cadre">
-            <img src="photo.jpg" width="447" height="447" alt="Portrait d'Alexis Izard">
-          </div>
-          <figcaption class="sticker sticker-1">Alexis Izard, <small>député de l'Essonne de 2022 à 2024</small></figcaption>
-          <span class="sticker sticker-2" aria-hidden="true">Essonne</span>
-        </figure>
+        <div class="heros-visuel">
+          <figure class="portrait">
+            <div class="portrait-cadre">
+              <img src="photo.jpg" width="447" height="447" alt="Portrait d'Alexis Izard">
+            </div>
+            <a class="story-heros" id="story-heros" href="sur-le-terrain.html" aria-label="Voir mes stories de terrain">
+              <span class="story-barres" id="story-barres"></span>
+              <span class="story-heros-img"><img id="story-heros-img" src="photo.jpg" width="240" height="426" alt=""></span>
+              <span class="story-heros-txt"><b id="story-heros-lieu">Sur le terrain</b><span id="story-heros-date">2022 – 2024</span></span>
+            </a>
+            <figcaption class="sr">Alexis Izard, député de l'Essonne de 2022 à 2024</figcaption>
+          </figure>
+          <p class="heros-roles">
+            <span><b>Aujourd'hui</b> Directeur de cabinet, groupe EPR</span>
+            <span><b>Élu local</b> Maire adjoint de Chamarande</span>
+          </p>
+        </div>
       </div>
     </section>
 
@@ -164,12 +176,16 @@
           <p>Comprendre l'Assemblée, découvrir la circonscription, suivre l'actualité locale.</p>
         </div>
         <div class="tuiles">
-          <a class="carte tuile t-bleu large apparait" href="assemblee.html">
+          <a class="carte tuile t-bleu apparait" href="assemblee.html">
             <div><h3>L'Assemblée en clair</h3><p>Le rôle d'un député, le chemin d'une loi, un hémicycle interactif et un quiz.</p></div>
             <span class="fleche">→</span>
           </a>
-          <a class="carte tuile t-jaune large apparait" href="circonscription.html">
+          <a class="carte tuile t-jaune apparait" href="circonscription.html">
             <div><h3>La circo commune par commune</h3><p>Carte interactive des 47 communes et histoire de la circonscription.</p></div>
+            <span class="fleche">→</span>
+          </a>
+          <a class="carte tuile t-rouge apparait" href="sur-le-terrain.html">
+            <div><h3>Partout, tout le temps</h3><p>Mon mandat raconté par mes stories&nbsp;: une carte animée, un calendrier jour par jour et un jeu.</p></div>
             <span class="fleche">→</span>
           </a>
           <a class="carte tuile apparait" href="engagement.html">
@@ -242,6 +258,7 @@
           <li><a href="assemblee.html">L'Assemblée en clair</a></li>
           <li><a href="circonscription.html">La circonscription</a></li>
           <li><a href="engagement.html">Mon engagement</a></li>
+          <li><a href="sur-le-terrain.html">Sur le terrain</a></li>
           <li><a href="revue-de-presse.html">Revue de presse</a></li>
           <li><a href="bureau-de-vote.html">Trouver mon bureau de vote</a></li>
         </ul>

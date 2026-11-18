@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sur le terrain : les 47 communes en 2 ans – Alexis Izard</title>
+  <meta name="description" content="Le mandat d'Alexis Izard, député de l'Essonne de 2022 à 2024, raconté par ses stories : une carte animée des 47 communes de la 3e circonscription, un calendrier jour par jour et un jeu « Où étais-je ? ».">
+  <meta name="author" content="Alexis Izard">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alexisizard.fr/sur-le-terrain.html">
+  <meta property="og:site_name" content="Alexis Izard">
+  <meta property="og:title" content="Sur le terrain : les 47 communes en 2 ans – Alexis Izard">
+  <meta property="og:description" content="Le mandat d'Alexis Izard, député de l'Essonne de 2022 à 2024, raconté par ses stories : une carte animée des 47 communes de la 3e circonscription, un calendrier jour par jour et un jeu « Où étais-je ? ».">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alexisizard.fr/sur-le-terrain.html">
+  <meta property="og:image" content="https://alexisizard.fr/photo.jpg">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#111c52">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+  
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="drapeau" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="entete">
+    <div class="entete-in">
+      <a class="logo" href="./">
+        <span class="logo-nom">Alexis Izard</span>
+        <span class="logo-sous">Ancien député de l'Essonne<br>3<sup>e</sup> circonscription</span>
+      </a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span><span class="sr">Menu</span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Navigation principale">
+        <a href="./">Accueil</a>
+<a href="assemblee.html">L'Assemblée</a>
+<a href="circonscription.html">La circo</a>
+<a href="engagement.html">Mon engagement</a>
+<a href="sur-le-terrain.html" aria-current="page">Sur le terrain</a>
+<a href="revue-de-presse.html">Revue de presse</a>
+<a href="bureau-de-vote.html">Bureau de vote</a>
+        <a class="btn btn-rouge btn-sm" href="./#contact">M'écrire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+<section class="page-tete">
+      <div class="conteneur page-tete-grille">
+        <div>
+          <p class="etiquette">Carnet de route · 2022 – 2024</p>
+          <h1 class="titre-xl">Partout, tout le temps.</h1>
+          <p class="chapeau">Les 47 communes, je les ai toutes parcourues. Une partie de ces journées, je les ai racontées en stories&nbsp;: mises bout à bout, elles dessinent la carte de deux ans de terrain.</p>
+        </div>
+        <div class="mini-chiffres">
+          <div><b><span class="js-stat" data-k="communes">47</span>/47</b><span>communes visitées</span></div>
+          <div><b class="js-stat" data-k="jours_circo">208</b><span>journées racontées en story</span></div>
+          <div><b class="js-stat" data-k="stories">407</b><span>stories dans la circo</span></div>
+          <div><b>800</b><span>déplacements au total</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPLAY -->
+    <section class="section" id="replay">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">Rejouez <span class="bleu">le mandat</span></h2>
+          <p>Lancez l'animation&nbsp;: chaque point est une story, chaque commune s'allume à la première. Les communes hachurées ont été visitées sans story. Touchez une commune pour voir ce que j'y ai fait.</p>
+        </div>
+        <div class="replay-grille">
+          <div class="carte replay-carte">
+            <svg id="carte-terrain" role="img" aria-label="Carte des communes visitées dans la 3e circonscription de l'Essonne"></svg>
+            <div class="replay-commandes">
+              <button class="btn btn-bleu replay-jouer" type="button" id="jouer" aria-pressed="false"><span class="ico-jouer" aria-hidden="true"></span><span class="txt">Rejouer le mandat</span></button>
+              <label class="sr" for="curseur">Date</label>
+              <input type="range" id="curseur" min="0" max="100" value="100" class="replay-curseur">
+            </div>
+          </div>
+          <aside class="replay-panneau" aria-live="polite">
+            <p class="replay-date" id="r-date">Juin 2022 – juin 2024</p>
+            <div class="replay-compteurs">
+              <div><b id="r-communes">47</b><span>communes sur 47</span></div>
+              <div><b id="r-jours">208</b><span>journées en story</span></div>
+            </div>
+            <figure class="story" id="r-story">
+              <div class="story-img"><img alt="" id="r-img" width="240" height="426" hidden></div>
+              <figcaption><b id="r-lieu">La 3ᵉ circonscription</b><span id="r-legende">Lancez l'animation ou touchez une commune.</span></figcaption>
+            </figure>
+          </aside>
+        </div>
+
+        <div class="commune-galerie" id="galerie" hidden>
+          <div class="galerie-tete">
+            <div>
+              <p class="etiquette" id="g-etiq">Commune</p>
+              <h3 class="titre-m" id="g-nom"></h3>
+              <p class="galerie-resume" id="g-resume"></p>
+            </div>
+            <button class="btn btn-sm" type="button" id="g-fermer">Fermer</button>
+          </div>
+          <ol class="galerie-piste" id="g-piste"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALENDRIER -->
+    <section class="section section-papier">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">Deux ans, <span class="rouge">jour après jour</span></h2>
+          <p>Chaque case est une journée du mandat. Rouge&nbsp;: une story dans la circo. Bleu&nbsp;: une story à l'Assemblée. Une case grise ne veut pas dire absent&nbsp;: juste pas de story. Touchez une case rouge pour revoir la journée.</p>
+        </div>
+        <div class="carte calendrier-boite">
+          <div class="calendrier" id="calendrier" role="grid" aria-label="Calendrier du mandat"></div>
+          <div class="legende calendrier-legende">
+            <span><i class="c-circo"></i>Dans la circonscription</span>
+            <span><i class="c-an"></i>À l'Assemblée</span>
+            <span><i class="c-rien"></i>Pas de story (ce qui ne veut pas dire absent)</span>
+          </div>
+        </div>
+        <div class="jour-detail" id="jour" hidden>
+          <p class="etiquette" id="jour-titre"></p>
+          <ol class="galerie-piste" id="jour-piste"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- JEUX -->
+    <section class="section section-encre" id="jeu">
+      <div class="conteneur">
+        <div class="section-tete">
+          <h2 class="titre-l">Où étais-je&nbsp;?</h2>
+          <p>Une story, quatre communes. Saurez-vous retrouver où elle a été prise&nbsp;? Cinq manches.</p>
+        </div>
+        <div class="jeu" id="jeu-zone">
+          <figure class="story story-jeu"><div class="story-img"><img alt="Story à localiser" id="jeu-img" width="240" height="426"></div></figure>
+          <div class="jeu-droite">
+            <p class="quiz-num" id="jeu-num">Manche 1 / 5</p>
+            <p class="jeu-q" id="jeu-q">Dans quelle commune étais-je&nbsp;?</p>
+            <div class="jeu-choix" id="jeu-choix"></div>
+            <p class="jeu-expli" id="jeu-expli" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="conteneur">
+        <div class="carte devine">
+          <div>
+            <p class="etiquette">Et chez vous&nbsp;?</p>
+            <h2 class="titre-l">Combien de fois suis-je venu dans votre commune&nbsp;?</h2>
+          </div>
+          <div class="devine-form">
+            <label class="presse-label" for="d-commune">Votre commune</label>
+            <select class="champ" id="d-commune"><option value="">Choisissez…</option></select>
+            <label class="presse-label" for="d-curseur" style="margin-top:18px">Votre pronostic&nbsp;: <b id="d-valeur">5</b> jours</label>
+            <input type="range" id="d-curseur" min="0" max="40" value="5" class="replay-curseur">
+            <button class="btn btn-bleu" type="button" id="d-valider" disabled>Voir la réponse</button>
+            <p class="devine-res" id="d-res" aria-live="polite"></p>
+          </div>
+        </div>
+        <p class="note-terrain">Les stories ne racontent qu'une partie du mandat&nbsp;: beaucoup de réunions, de rendez-vous avec les maires et de permanences n'ont pas fait l'objet d'une story. Au total, près de 800 déplacements dans la circonscription, et les 47 communes visitées. Les lieux exacts ne sont pas publiés&nbsp;: chaque point est placé au hasard dans sa commune.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pied">
+    <div class="pied-cta">
+      <div class="conteneur pied-cta-in">
+        <p class="pied-cta-titre">Une question&nbsp;? Une idée&nbsp;?<br>Écrivez-moi, je réponds.</p>
+        <a class="btn btn-blanc btn-lg js-mail" data-u="alexis.izard" data-d="gmail.com" href="./#contact">Écrire un email</a>
+      </div>
+    </div>
+    <div class="conteneur pied-grille">
+      <div>
+        <p class="pied-logo">Alexis Izard</p>
+        <p>Député de la 3<sup>e</sup> circonscription de l'Essonne de 2022 à 2024.<br>Maire adjoint aux finances de Chamarande.</p>
+      </div>
+      <div>
+        <p class="pied-titre">Le site</p>
+        <ul>
+          <li><a href="./">Accueil</a></li>
+          <li><a href="assemblee.html">L'Assemblée en clair</a></li>
+          <li><a href="circonscription.html">La circonscription</a></li>
+          <li><a href="engagement.html">Mon engagement</a></li>
+          <li><a href="sur-le-terrain.html">Sur le terrain</a></li>
+          <li><a href="revue-de-presse.html">Revue de presse</a></li>
+          <li><a href="bureau-de-vote.html">Trouver mon bureau de vote</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="pied-titre">La circo en bref</p>
+        <ul>
+          <li>47 communes</li>
+          <li>≈ 152 000 habitants</li>
+          <li>110 bureaux de vote</li>
+          <li>De Brétigny-sur-Orge à Dourdan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="conteneur pied-bas">
+      <p>© <span class="js-annee">2026</span> Alexis Izard</p>
+      <a href="mentions-legales.html">Mentions légales</a>
+    </div>
+  </footer>
+
+  <script src="js/commun.js" defer></script>
+  <script src="js/terrain.js" defer></script>
+</body>
+</html>
